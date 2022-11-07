@@ -11,7 +11,7 @@ const CreateUpdateUser = ({user, getCreateUpdateData}) => {
     const {id, name, surname, rank} = user;
 
     const {register, setValue, handleSubmit, reset, formState: {errors}, clearErrors} = useForm({
-        resolver: joiResolver(id ? userValidation.update : userValidation.save),
+        resolver: joiResolver(userValidation),
         mode: "onTouched",
     });
 
@@ -29,20 +29,19 @@ const CreateUpdateUser = ({user, getCreateUpdateData}) => {
         const {data} = await userService.save(userData);
         getCreateUpdateData(data);
         toggleBtn();
-        reset();
     };
 
     const updateUser = async (userData) => {
         const {data} = await userService.updateById(id, userData);
         getCreateUpdateData(data);
         toggleBtn();
-        reset();
     };
 
     const toggleBtn = () => {
         const updateElement = document.getElementsByClassName('update-user')[0];
         updateElement.classList.toggle('update-user-show');
         getCreateUpdateData('close');
+        reset();
         clearErrors();
     };
 
