@@ -1,0 +1,64 @@
+.layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users {
+    background: #ffffffa8;
+    padding: 0 10px 50px;
+    width: 100%;
+}
+
+.add-user {
+    display: flex;
+    align-items: end;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.add-user-btn {
+    margin-left: 5px;
+}
+
+.add-user-btn:hover {
+    color: darkblue;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+table, th, td {
+    padding: 0 10px;
+    border: 1px solid #a9a9a9;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.77);
+}
+
+td {
+    text-align: center;
+}
+
+tbody {
+    margin-bottom: 20px;
+}
+
+.rank {
+    border: 1px solid #a9a9a9;
+}
+
+.user-name {
+    text-align: start;
+
+}
+
+.user-name:hover {
+    cursor: grab;
+    color: darkblue;
+    box-shadow: inset 0 0 5px 0 cornflowerblue;
+}
+
+.swg-btn:hover {
+    cursor: pointer;
+    color: darkblue;
+}
