@@ -1,18 +1,18 @@
 import React, {useEffect} from 'react';
-import {useForm} from "react-hook-form";
-import {BsX} from "react-icons/bs";
+import {useForm} from 'react-hook-form';
+import {BsX} from 'react-icons/bs';
 import {joiResolver} from '@hookform/resolvers/joi';
 
 import './CreateUpdateUser.css';
-import {userService} from "../../servises/userService";
-import {userValidation} from "../../validation/userValidation";
+import {userService} from '../../servises/userService';
+import {userValidation} from '../../validation/userValidation';
 
 const CreateUpdateUser = ({user, getCreateUpdateData}) => {
     const {id, name, surname, rank} = user;
 
     const {register, setValue, handleSubmit, reset, formState: {errors}, clearErrors} = useForm({
         resolver: joiResolver(userValidation),
-        mode: "onTouched",
+        mode: 'onTouched',
     });
 
     useEffect(() => {
@@ -53,13 +53,13 @@ const CreateUpdateUser = ({user, getCreateUpdateData}) => {
 
             <form onSubmit={handleSubmit(id ? updateUser : createUser)}>
 
-                <label>Name: <input type="text" {...register('name')}/></label>
+                <label>Name: <input type='text' {...register('name')}/></label>
                 {errors.name && <span>( {errors.name.message} )</span>}
 
-                <label>Surname: <input type="text" {...register('surname')}/></label>
+                <label>Surname: <input type='text' {...register('surname')}/></label>
                 {errors.surname && <span>( {errors.surname.message} )</span>}
 
-                <label>Rank: <input type="number" {...register('rank')}/></label>
+                <label>Rank: <input type='number' {...register('rank')}/></label>
                 {errors.rank && <span>( {errors.rank.message} )</span>}
 
                 <button>save</button>

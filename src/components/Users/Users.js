@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {FiEdit3} from "react-icons/fi";
-import {BsPlusSquareDotted, BsTrash} from "react-icons/bs";
+import {FiEdit3} from 'react-icons/fi';
+import {BsPlusSquareDotted, BsTrash} from 'react-icons/bs';
 
 import './Users.css';
-import {userService} from "../../servises/userService";
-import {CreateUpdateUser} from "../CreateUpdateUser/CreateUpdateUser";
+import {userService} from '../../servises/userService';
+import {CreateUpdateUser} from '../CreateUpdateUser/CreateUpdateUser';
 
 const Users = () => {
 
@@ -98,7 +98,6 @@ const Users = () => {
                         onClick={createUser}
                         className={'add-user-btn'}
                     />
-
                 </div>
 
                 <table>
