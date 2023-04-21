@@ -1,0 +1,8 @@
+Overview
+1. Create a program in any programming language you are comfortable with that keeps track of an ordered, numbered list of names.
+2. We should have users, but the list is one for all users. Meanwhile, each user should have their own order.
+3. Each name should have a rank (numbered) associated with it and be displayed in the program.
+4. The list should be sorted ascending based on rank.
+5. You should be able to re-order the list, moving a name up or down the list to change its associated rank. This can be with drop-downs or drag-and-drop or any method of your choosing, as long as it works.
+6. You should be able to add to and delete from the list.
+7. You should be able to edit an item in the list.
